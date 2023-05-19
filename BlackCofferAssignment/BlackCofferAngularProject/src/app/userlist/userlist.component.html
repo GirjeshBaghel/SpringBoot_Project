@@ -1,0 +1,61 @@
+<h2>User list</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Data Id</th>
+<th>Intensity</th>
+<th>Likelihood</th>
+<th>Year</th>
+<th>Country:</th>
+<th>Topic</th>
+<th>Region</th>
+<th>City</th>
+<th>End_Year</th>
+<th>CityLang</th>
+<th>CityLat</th>
+<th>Sector</th>
+<th>Insight</th>
+<th>Swot</th>
+<th>URL</th>
+<th>Start_Year</th>
+<th>Impact</th>
+<th>Added</th>
+<th>Published</th>
+<th>Pestle</th>
+<th>Source</th>
+
+
+</tr>
+</thead>
+
+<tbody>
+    <tr *ngFor="let user of  users">
+    <!-- <td>{{instructor.userId}}</td>-->
+    <td>{{user.data_id}}</td>
+    <td>{{user.intensity}}</td>
+<td>{{user.likelihood}}</td>
+<td>{{user.relevance}}</td>
+<td>{{user.year}}</td>
+<td>{{user.country}}</td>
+<td>{{user.topic}}</td>
+<td>{{user.region}}</td>
+<td>{{user.city}}</td>
+<td>{{user.end_year}}</td>
+<td>{{user.citylng}}</td>
+<td>{{user.citylat}}</td>
+<td>{{user.sector}}</td>
+<td>{{user.insight}}</td>
+<td>{{user.swot}}</td>
+<td>{{user.url}}</td>
+<td>{{user.star_year}}</td>
+<td>{{user.impact}}</td>
+<td>{{user.added}}</td>
+<td>{{user.published}}</td>
+<td>{{user.pestle}}</td>
+<td>{{user.source}}</td>
+
+<td><button (click)="updateUser(user.data_id)" class="btn btn-info">Edit</button></td>
+<td><button (click)="deleteUser(user.data_id)" class="btn btn-danger">Delete</button></td>
+</tr>
+</tbody>
+</table>
